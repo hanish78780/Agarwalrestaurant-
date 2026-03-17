@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/payment1.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/photos/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/photos/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/photos/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="container mt-5 p-4">
+        <header class="text-center mb-4">
+            <h1>Complete Your Payment</h1>
+        </header>
+
+        <!-- Payment Method Selection -->
+        <section class="payment-options mb-4 border p-3 rounded shadow">
+            <h2 class="text-center mb-3">Select Payment Method</h2>
+            <div class="payment-methods d-flex justify-content-around flex-wrap">
+                <label class="payment-method d-flex flex-column align-items-center border p-3 rounded">
+                    <img src="/assets/photos/upi-icon.png" alt="UPI" />
+                    <input type="radio" name="payment-method" value="UPI" class="mt-2">
+                    <span class="fw-bold">UPI</span>
+                </label>
+                <label class="payment-method d-flex flex-column align-items-center border p-3 rounded">
+                    <img src="https://img.icons8.com/color/48/visa.png" alt="Debit Card" />
+                    <input type="radio" name="payment-method" value="Debit Card" class="mt-2">
+                    <span class="fw-bold">Debit Card</span>
+                </label>
+                <label class="payment-method d-flex flex-column align-items-center border p-3 rounded">
+                    <img src="https://img.icons8.com/color/48/mastercard.png" alt="Credit Card" />
+                    <input type="radio" name="payment-method" value="Credit Card" class="mt-2">
+                    <span class="fw-bold">Credit Card</span>
+                </label>
+                <label class="payment-method d-flex flex-column align-items-center border p-3 rounded">
+                    <img src="https://img.icons8.com/color/48/cash.png" alt="Cash on Delivery" />
+                    <input type="radio" name="payment-method" value="Cash on Delivery" class="mt-2">
+                    <span class="fw-bold">COD</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- UPI Sub-options -->
+        <section id="upi-options" class="hidden border p-3 rounded shadow mb-4">
+            <h2 class="text-center mb-3">Select UPI Option</h2>
+            <div class="payment-methods d-flex justify-content-around flex-wrap">
+                <label class="payment-method d-flex flex-column align-items-center border p-3 rounded">
+                    <img src="https://img.icons8.com/color/48/google-pay.png" alt="Google Pay" />
+                    <input type="radio" name="upi-method" value="Google Pay" class="mt-2">
+                    <span class="fw-bold">Google Pay</span>
+                </label>
+                <label class="payment-method d-flex flex-column align-items-center border p-3 rounded">
+                    <img src="https://img.icons8.com/?size=100&id=OYtBxIlJwMGA&format=png&color=000000" alt="PhonePe" />
+                    <input type="radio" name="upi-method" value="PhonePe" class="mt-2">
+                    <span class="fw-bold">PhonePe</span>
+                </label>
+                <label class="payment-method d-flex flex-column align-items-center border p-3 rounded">
+                    <img src="https://img.icons8.com/color/48/paytm.png" alt="Paytm" />
+                    <input type="radio" name="upi-method" value="Paytm" class="mt-2">
+                    <span class="fw-bold">Paytm</span>
+                </label>
+                <label class="payment-method d-flex flex-column align-items-center border p-3 rounded">
+                    <img src="https://img.icons8.com/?size=100&id=5RcHTSNy4fbL&format=png&color=000000" alt="UPI ID" />
+                    <input type="radio" name="upi-method" value="UPI ID" class="mt-2">
+                    <span class="fw-bold">UPI ID</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Payment Details -->
+        <section class="payment-details mb-4">
+            <h2 class="text-center">Payment Amount</h2>
+            <div class="amount-container text-center my-3">
+                <span>Total Amount: </span>
+                <span id="total-paid" class="fw-bold">Rs. 0.00</span>
+            </div>
+
+            <!-- Debit and Credit Card Form -->
+            <div id="card-details-form" class="hidden">
+                <h3 class="text-center">Enter Card Details</h3>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="card-number" placeholder="Card Number">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="card-name" placeholder="Name on Card">
+                </div>
+                <div class="mb-3 d-flex justify-content-between">
+                    <input type="text" class="form-control me-2" id="expiry-date" placeholder="Expiry Date (MM/YY)">
+                    <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                </div>
+            </div>
+
+            <!-- QR Code Display -->
+            <div id="qr-code-container" class="text-center hidden">
+                <h3 class="text-center">Scan the QR Code</h3>
+                <div class="upi-qr text-center">
+                    <img src="/assets/photos/qr.jpg" alt="QR Code" id="upi-qr-code" class="img-fluid rounded shadow" />
+                </div>
+            </div>
+
+            <!-- UPI ID Form -->
+            <div id="upi-id-form" class="hidden">
+                <h3 class="text-center">Enter UPI ID</h3>
+                <input type="text" id="upi-id" class="form-control mb-3"
+                    placeholder="Enter your UPI ID (example@upi)" />
+            </div>
+
+            <div class="text-center mt-4">
+                <button id="pay-now-btn" class="btn btn-primary px-5">Pay Now</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <a href="checkout.html" class="btn btn-secondary">Back to Checkout</a>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/payment1.js"></script> <!-- Link to your custom JavaScript -->
+</body>
+
+</html>

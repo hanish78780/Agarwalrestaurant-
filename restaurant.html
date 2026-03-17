@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/restaurant.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/photos/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/photos/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/photos/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/photos/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/photos/favicon_io/android-chrome-512x512.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+  <div class="slider-container-1">
+    <div class="slider1 ">
+      <p class="moving"><span>Welcome To <b style="color: rgb(12, 236, 19);">AGRAWAL RESTAURANT</b> , <b id="text1">
+            Once you
+            try it, You will love it.</b></span></p>
+    </div>
+  </div>
+
+
+  <nav id="navbar" class="navbar navbar-expand-lg bg-theme-color sticky-top">
+    <div class="container-fluid">
+      <!-- Navbar Toggler Button -->
+      <button class="navbar-toggler mx-1 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Brand -->
+      <a href="index.html" class="navbar-brand">
+        <img src="/assets/photos/logo.png" width="100" height="50" alt="Logo" class="p-0">
+      </a>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0  justify-content-between">
+          <li class="nav-item ">
+            <a href="index.html" class="nav-link  text-black">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link text-black">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="restaurant.html" class="nav-link active bg-warning text-black">Restaurant</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link text-black">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link text-black">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link text-black contact-btn">
+              <i class="bi bi-phone"></i> Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sign In/Out and Cart -->
+
+
+      <div class="ms-auto d-flex align-items-center">
+        <div class="dropdown"  id="userDropdown" style="display: none;">
+            <button class="dropdown-button">
+                <img id="userIcon" width="30" height="30" src="https://img.icons8.com/?size=100&id=7820&format=png&color=000000" alt="User Icon">
+            </button>
+            <div class="dropdown-content">
+                <ul class="my-3">
+                    <li class="mb-2">
+                        <span id="userName" class="fw-bold" style="display: none;">User Name</span>
+                    </li>
+                    <li>
+                        <button id="signOutButton">Sign Out</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="#" id="toggleSignIn" class="btn btn-outline-primary me-3">Sign In</a>
+        <button id="view-cart-btn" class="btn">
+          <img src="https://img.icons8.com/?size=100&id=fJmit3g8fEh5&format=png&color=000000" width="35" height="35"
+            alt="Cart">
+          <span id="cart-badge" class="cart-badge">0</span> <!-- Badge for notification -->
+        </button>
+     </div>
+      <!-- Sign-In/Sign-Up Modal -->
+      <div id="login">
+        <div id="signinPanel" class="signin-panel" style="display: none;">
+          <span class="close-btn" id="closePanel">&times;</span>
+          <div id="signinForm" class="login">
+            <h2 class="mb-3 text-info text-center" style="border-bottom: 2px solid skyblue;">SIGN IN</h2>
+
+            <form id="signIn">
+              <div class="mb-2">
+                <label for="name" class="form-label">Full Name:-</label>
+                <input type="text" class="form-control" id="createAccountName" placeholder="Full Name" required>
+              </div>
+              <div class="mb-2">
+                <label for="signInPhone" class="form-label">Phone Number:-</label>
+                <input type="tel" class="form-control" id="signInPhone" name="Phone" pattern="[0-9]{10}"
+                  placeholder="Enter 10-digit phone number" maxlength="10" required>
+              </div>
+              <div class="mb-2">
+                <label for="email" class="form-label">Email Address:-</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Password:-</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:10px"> Remember me
+              </label>
+
+              <button type="submit" class="btn btn-primary w-100 mb-2 text-center">Sign In</button>
+              <div class="d-flex justify-content-center align-items-center ">
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+                <span class="text-black mt-2 mb-2">OR CONTINUE WITH</span>
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+              </div>
+              <div class="d-flex justify-content-around mb-2">
+                <button class="btn btn-outline-primary w-40"><img
+                    src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="20">
+                  Facebook</button>
+                <button class="btn btn-outline-danger w-40"><img
+                    src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" width="20">
+                  Google</button>
+                <button class="btn btn-outline-info w-40"><img
+                    src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft" width="20">
+                  Microsoft</button>
+              </div>
+              <div id="errorMessage"></div>
+            </form>
+            <div class="text-center">New user?
+              <a href="#" id="switchToCreateAccount">Create an Account</a>
+            </div>
+            <p class="small text-center">By signing up you agree to our <a href="#">Terms of Service</a> and <a
+                href="#">Privacy Policy</a>.</p>
+          </div>
+          <div class="login" id="createAccountForm" style="display: none;">
+            <h2 class="mb-3 text-info text-center" style="border-bottom: 2px solid skyblue;">Create Account</h2>
+            <form id="createAccount">
+              <div class="mb-2">
+                <label for="name" class="form-label">Full Name:-</label>
+                <input type="text" class="form-control" id="createAccountName" placeholder="Full Name" required>
+              </div>
+              <div class="mb-2">
+                <label for="createPhoneNumber" class="form-label">Phone Number:</label>
+                <input type="tel" class="form-control" id="createPhoneNumber" name="Phone" pattern="[0-9]{10}"
+                  placeholder="Enter 10-digit phone number" maxlength="10" required>
+              </div>
+              <div class="mb-2">
+                <label for="email" class="form-label">Email Address:-</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Password:-</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:10px"> Remember me
+              </label>
+              <button type="submit" class="btn btn-primary w-100  mb-2 text-center">Create Account</button>
+              <div class="d-flex justify-content-center align-items-center ">
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+                <span class="text-black mt-2 mb-2">OR CONTINUE WITH</span>
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+              </div>
+              <div class="d-flex justify-content-around mb-2">
+                <button class="btn btn-outline-primary w-40"><img
+                    src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="20">
+                  Facebook</button>
+                <button class="btn btn-outline-danger w-40"><img
+                    src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" width="20">
+                  Google</button>
+                <button class="btn btn-outline-info w-40"><img
+                    src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft" width="20">
+                  Microsoft</button>
+              </div>
+              <div id="createAccountErrorMessage"></div>
+            </form>
+            <div class="text-center">Already have an account?
+              <a href="#" id="switchToSignIn">Sign In</a>
+            </div>
+            <p class="small text-center">By creating new account you agree to our <a href="#">Terms of Service</a> and
+              <a href="#">Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Sign-Out Panel -->
+      <div id="signoutPanel" class="signout-panel" style="display: none;">
+        <span class="close-btn" id="closeSignOutPanel">&times;</span>
+        <div class="login">
+          <h2>User Details</h2>
+          <div class="user-details">
+            <p id="userDetailsName"></p>
+            <p id="userDetailsEmail"></p>
+            <p id="userDetailsPhone"></p>
+          </div>
+          <button id="signOutButton">Sign Out</button>
+        </div>
+      </div>
+  </nav>
+
+
+  <!-- Header Section -->
+  <header class="jumbotron text-center  text-danger py-5">
+    <h1><b>
+        <marquee scrollamount="10" direction="left" class="marquee-desktop">Welcome to Agrawal Restaurant</marquee>
+        <marquee scrollamount="5" direction="left" class="marquee-mobile">Welcome to Agrawal Restaurant</marquee>
+      </b></h1>
+    <h3 class="text-white"><b>
+        <marquee scrollamount="8" direction="right" class="marquee-desktop">Delicious Food & Amazing Ambience</marquee>
+        <marquee scrollamount="3" direction="right" class="marquee-mobile">Delicious Food & Amazing Ambience</marquee>
+      </b></h3>
+  </header>
+
+  <!-- Restaurant Image -->
+  <section id="restaurant-image" class="text-center" ">
+    <img src="
+    https://lh3.googleusercontent.com/pw/AP1GczOa6MTcUiguEkLVRL9rTB9c-nACGFRR7wufk5GEodQ3mqQmVyUGQUmQbn9SKqgQemRU7efZeGtT0SBn7NHnMPb_GiZLsChcEHIEbnVCzS5nYrgSARgm0nKzPMZ0pRsHGhA2onW4OYzRx80nY78VoWxVqA=w1000-h405-s-no-gm?authuser=0"
+    alt="Restaurant Image" class="img-fluid">
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 text-center">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We offer an exquisite dining experience with the best dishes and a beautiful atmosphere. Our mission is to make
+        your visit unforgettable.</p>
+    </div>
+  </section>
+
+  <!-- Interior Section -->
+  <section id="interior" class="py-5 text-center">
+    <div class="container">
+      <h2>Interior & Ambience</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="https://lh3.googleusercontent.com/pw/AP1GczPj7rhfF0rLsgntHGI2sGoPtO6eOCmShyRaeRLfqtqDvaAoq2V5framHuAA5Msz43aEpQ9zOEfot4XwbLrree7BLopZpwQy8SfV7GkPFMLiA3Hmkw9S4fqt9u_ihRX1MRMckUMsqhxGO5vtJ_UW3zbR_A=w1000-h667-s-no-gm?authuser=0"
+            alt="Interior" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://lh3.googleusercontent.com/pw/AP1GczNB09Q7ceay56objofXFDLRVW9EqX0JWETZKApP4e490rhr78L-Ltkto9Rz4YmplTbBQ2Eu-nrmohLZP69d2jl-yiR3WfgjZCrQ4p85ZrQ18kgLKVyS5sdksmJTW9RMyqljbWQy92GW5xzlGFHluvTGZA=w1000-h500-s-no-gm?authuser=0"
+            alt="Rooftop" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://lh3.googleusercontent.com/pw/AP1GczPKMdJKRF7bFRD6M2BAeK5E0PMLqg5y-ZLl0u0MWCGs3o4d7Y9KeBEqj9e2oj3fKgemw-X96qvyeMwhhQOjYkStDxdpp4k9hmv1ejV0DbbrsgzsWargRHIRyIpXNdlB1BHyXoAbPw7x_q2dnUzAQvfr6A=w1000-h560-s-no-gm?authuser=0"
+            alt="Kitchen" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hall & Table Section -->
+  <section id="hall" class="py-5 text-center">
+    <div class="container">
+      <h2>Our Dining Hall & Table Settings</h2>
+      <div class="row">
+        <div class="col-md-6 ">
+          <img
+            src="https://lh3.googleusercontent.com/pw/AP1GczNAECy8Pa6b87-uXdOgheXyNViw-zt8H9q44EVlZ1lHFP0bJpE3ANjwWY5GVECJ2P5GWz9-W4W7XIKhrOo7N7GaAjhoyZunkZ37Ac1MmHe4Q3XE1gP6py2PGfJyB-V54VnsMHtDvWyTlb3JHi1LUP0dBQ=w1000-h571-s-no-gm?authuser=0"
+            alt="Dining Hall" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <img
+            src="https://lh3.googleusercontent.com/pw/AP1GczNB7WccFovP8OEAo8la9z9mPjHWTXVcHEk1LfxqV6XlIZ7xfVJEsM7Xy76eLKX34lZI23tH7ov7lRDlHaCrb3WZq8_5KSJqV3sxIPrAFGLDT7hVeFVWcuMOeXsIULciDV0fgLKZAW1bVfc_HgCanj2YKQ=w1000-h667-s-no-gm?authuser=0"
+            alt="Table Section" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section id="reviews" class="py-5 bg-light text-center">
+    <div class="container">
+      <h2>Customer Reviews</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="review">
+            <img src="/assets/photos/g10.jpg" alt="John Doe" class="rounded-circle" width="100" height="100">
+            <p>"Amazing food and great atmosphere!"</p>
+            <span>- John Doe</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="review">
+            <img src="assets/photos/c2.png" alt="Jane Smith" class="rounded-circle" width="180" height="100">
+            <p>"The rooftop experience was just incredible!"</p>
+            <span>- Jane Smith</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="review">
+            <img src="/assets/photos/c3.png" alt="Michael Lee" class="rounded-circle" width="100" height="100">
+            <p>"Best restaurant in town, hands down!"</p>
+            <span>- Michael Lee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section id="booking" class="py-5 text-center">
+    <div class="container  " id="table-booking">
+      <h2 class="mb-4 text-danger "><b>Book a Table</b></h2>
+      <form id="booking-form" action="booking.php" method="POST">
+
+        <div class="form-group mb-2">
+          <label for="name">Your Name</label>
+          <input type="text" class="form-control" id="name1" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="email">Your Email</label>
+          <input type="email" class="form-control" id="email1" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="phone">Your Phone</label>
+          <input type="text" class="form-control" id="phone1" name="phone" placeholder="Your Phone" required>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date" name="date" placeholder="date" required>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="time">Time:</label>
+          <select id="time" name="time" class="form-control" name="time" required>
+            <option value="">Select Time</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="1:00">1:00 PM</option>
+            <option value="2:00">2:00 PM</option>
+            <option value="3:00">3:00 PM</option>
+            <option value="4:00">4:00 PM</option>
+            <option value="5:00">5:00 PM</option>
+            <option value="6:00">6:00 PM</option>
+            <option value="7:00">7:00 PM</option>
+            <option value="8:00">8:00 PM</option>
+            <option value="9:00">9:00 PM</option>
+          </select>
+        </div>
+        <div class="form-group mb-2">
+          <label for="table">Select Table</label>
+          <select class="form-control" id="table" name="table" required>
+            <option value="">Choose a Table</option>
+            <option value="1">Table 1</option>
+            <option value="2">Table 2</option>
+            <option value="3">Table 3</option>
+            <option value="4">Table 4</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary booking-btn">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="footer ">
+    <div
+      class="container-fluid  d-flex flex-wrap justify-content-center p-5 bg-light text-black border border-2 border-black">
+      <div class="footer-section col-md-4 p-5">
+        <h3>Opening Hours</h3>
+
+        <li><strong>Monday - Friday</strong><span>08.00 am - 10.00 pm</span></li>
+        <li><strong>Saturday</strong><span>08.00 am - 12.00 pm</span></li>
+        <li><strong>Sunday</strong><span>08.00 am - 12.00 pm</span></li>
+
+      </div>
+      <div class="footer-section col-md-4 p-5">
+        <h3>Contact Us</h3>
+        <address>
+          <b>Hanish Singhal</b> <br>
+          A-133, AGRAWAL RESTAURANT, Skit Collage Gate No. 1, Radhika Bakers,<br>
+          Jaipur, Rajasthan - 302017
+          <p><i class="fa fa-phone" alt="phone"></i><strong> +91-7878-030-802</strong></p>
+          <p><i class="fa fa-phone"></i><strong> +91-7073-731-764</strong></p>
+        </address>
+      </div>
+      <div class="footer-section col-md-4 p-5">
+        <h3>Newsletter</h3>
+        <p>You can trust us. We only send promo offers, not a single spam.</p>
+        <form id="newsletter-form">
+          <input type="email" id="email2" placeholder="Your Email address" required>
+          <button type="submit">➔</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&#169;Copyright 2024 All rights reserved | This website is managed by <a href="#" target="_blank"
+          style="color: red;">❤️Agrawal Restaurant</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/hanish.singhal.77"><i class="fa fa-facebook" alt="Facebook"></i></a>
+        <a href="https://x.com/Hanish7878"><i class="fa fa-twitter" alt="Twitter"></i></a>
+        <a href="https://www.instagram.com/infinite_hanish/"><i class="fa fa-instagram" alt="Dribbble"></i></a>
+        <a href="#"><i class="fa fa-behance" alt="Behance"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript for Validation and Alert -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/restaurant.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/js.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+
+</html>

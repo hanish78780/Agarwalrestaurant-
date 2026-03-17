@@ -1,0 +1,24 @@
+section{
+    min-height: 170vh;
+}
+
+#text2{
+    font-weight: 600;
+    color: #f42f2c;
+}
+
+.single-gallery {
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.single-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.single-gallery:hover img {
+    transform: scale(1.1);
+}

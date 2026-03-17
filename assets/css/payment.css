@@ -1,0 +1,158 @@
+/* Global styles */
+body {
+    /* background: linear-gradient(45deg, #ff8c00, #ffcc00); */
+    /* background-color: #ff8c00; */
+    background-color: #f5fefd;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container.checkout-container {
+    margin-top: 50px;
+    margin-left: 150px;
+   
+}
+
+.card {
+    border-radius: 10px 0px 0px 10px;
+   
+    min-height: 87.5vh;
+    background-color: #dee2e6;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+}
+
+h3, h5 {
+    font-weight: bold;
+}
+
+label {
+    font-weight: 600;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+#upiOptions, #creditCardInfo {
+    margin-top: 20px;
+}
+/* UPI payment method box styles */
+.upi-box {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.upi-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.form-check input[type="radio"] {
+    display: none;
+}
+
+
+#qrCode img {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+#qrCode img:hover {
+    transform: scale(1.05);
+}
+
+/* Order summary section */
+.order-summary {
+  background-color: #ced4da;
+  color: #000000;
+    margin-left: -25px;
+border-radius: 0px 10px 10px 0px;
+}
+
+.image-container img {
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    transition: transform 0.3s;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    margin-top: 10px;
+}
+
+#make-payment {
+    background-color: #ff8c00;
+    border-color: #ff8c00;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+#make-payment:hover {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+}
+
+.btn-outline-primary {
+    border-color: #ff8c00;
+    color: #ff8c00;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ff8c00;
+    color: white;
+}
+
+/* Form validation styles */
+.is-invalid {
+    border-color: red;
+}
+
+.is-invalid::placeholder {
+    color: red;
+}
+
+.is-valid {
+    border-color: green;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .checkout-container {
+        margin-top: 30px;
+    }
+
+    .order-summary {
+        margin-top: 30px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-width: 768px) {
+    .checkout-container {
+        margin-top: 30px;
+    }
+
+    
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+}

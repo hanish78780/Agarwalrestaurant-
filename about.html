@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/aboutus.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/photos/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/photos/favicon_io/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/photos/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/photos/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/photos/favicon_io/favicon-16x16.png">
+ 
+</head>
+
+<body>
+  <div class="slider-container-1">
+    <div class="slider1 ">
+      <p class="moving  "><span>Welcome To <b style="color: rgb(12, 236, 19);">AGRAWAL RESTAURANT</b> , 
+          <b id="text1">Once you try it, You will love it.</b></span>
+      </p>
+    </div>
+  </div>
+
+
+  <nav id="navbar" class="navbar navbar-expand-lg bg-theme-color sticky-top">
+    <div class="container-fluid">
+      <!-- Navbar Toggler Button -->
+      <button class="navbar-toggler mx-1 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Brand -->
+      <a href="#" class="navbar-brand">
+        <img src="/assets/photos/logo.png" width="100" height="50" alt="Logo" class="p-0">
+      </a>
+      
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+      
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0  justify-content-between">
+          <li class="nav-item ">
+            <a href="index.html" class="nav-link  text-black">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link text-black">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="restaurant.html" class="nav-link text-black">Restaurant</a>
+          </li>
+          <li class="nav-item">
+            <a href="services.html" class="nav-link text-black">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active bg-warning text-black">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link text-black contact-btn">
+              <i class="bi bi-phone"></i> Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Sign In/Out and Cart -->
+    
+
+      <div class="ms-auto d-flex align-items-center">
+        <div class="dropdown"  id="userDropdown" style="display: none;">
+            <button class="dropdown-button">
+                <img id="userIcon" width="30" height="30" src="https://img.icons8.com/?size=100&id=7820&format=png&color=000000" alt="User Icon">
+            </button>
+            <div class="dropdown-content">
+                <ul class="my-3">
+                    <li class="mb-2">
+                        <span id="userName" class="fw-bold" style="display: none;">User Name</span>
+                    </li>
+                    <li>
+                        <button id="signOutButton">Sign Out</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="#" id="toggleSignIn" class="btn btn-outline-primary me-3">Sign In</a>
+        <button id="view-cart-btn" class="btn">
+          <img src="https://img.icons8.com/?size=100&id=fJmit3g8fEh5&format=png&color=000000" width="35" height="35"
+            alt="Cart">
+          <span id="cart-badge" class="cart-badge">0</span> <!-- Badge for notification -->
+        </button>
+     </div>
+  
+      <!-- Sign-In/Sign-Up Modal -->
+      <div id="login">
+        <div id="signinPanel" class="signin-panel" style="display: none;">
+          <span class="close-btn" id="closePanel">&times;</span>
+          <div id="signinForm" class="login">
+            <h2 class="mb-3 text-info text-center" style="border-bottom: 2px solid skyblue;">SIGN IN</h2>
+
+            <form id="signIn">
+              <div class="mb-2">
+                <label for="name" class="form-label">Full Name:-</label>
+                <input type="text" class="form-control" id="createAccountName" placeholder="Full Name" required>
+              </div>
+              <div class="mb-2">
+                <label for="signInPhone" class="form-label">Phone Number:-</label>
+                <input type="tel" class="form-control" id="signInPhone" name="Phone" pattern="[0-9]{10}"
+                  placeholder="Enter 10-digit phone number" maxlength="10" required>
+              </div>
+              <div class="mb-2">
+                <label for="email" class="form-label">Email Address:-</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Password:-</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:10px"> Remember me
+              </label>
+
+              <button type="submit" class="btn btn-primary w-100 mb-2 text-center">Sign In</button>
+              <div class="d-flex justify-content-center align-items-center ">
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+                <span class="text-black mt-2 mb-2">OR CONTINUE WITH</span>
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+
+
+
+              </div>
+              <div class="d-flex justify-content-around mb-2">
+                <button class="btn btn-outline-primary w-40"><img
+                    src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="20">
+                  Facebook</button>
+                <button class="btn btn-outline-danger w-40"><img
+                    src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" width="20">
+                  Google</button>
+                <button class="btn btn-outline-info w-40"><img
+                    src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft" width="20">
+                  Microsoft</button>
+              </div>
+              <div id="errorMessage"></div>
+            </form>
+            <div class="text-center">New user?
+              <a href="#" id="switchToCreateAccount">Create an Account</a>
+            </div>
+            <p class="small text-center">By signing up you agree to our <a href="#">Terms of Service</a> and <a
+                href="#">Privacy Policy</a>.</p>
+
+          </div>
+
+          <div class="login" id="createAccountForm" style="display: none;">
+            <h2 class="mb-3 text-info text-center" style="border-bottom: 2px solid skyblue;">Create Account</h2>
+            <form id="createAccount">
+              <div class="mb-2">
+                <label for="name" class="form-label">Full Name:-</label>
+                <input type="text" class="form-control" id="createAccountName" placeholder="Full Name" required>
+              </div>
+              <div class="mb-2">
+                <label for="createPhoneNumber" class="form-label">Phone Number:</label>
+                <input type="tel" class="form-control" id="createPhoneNumber" name="Phone" pattern="[0-9]{10}"
+                  placeholder="Enter 10-digit phone number" maxlength="10" required>
+              </div>
+              <div class="mb-2">
+                <label for="email" class="form-label">Email Address:-</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Password:-</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:10px"> Remember me
+              </label>
+              <button type="submit" class="btn btn-primary w-100  mb-2 text-center">Create Account</button>
+              <div class="d-flex justify-content-center align-items-center ">
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+                <span class="text-black mt-2 mb-2">OR CONTINUE WITH</span>
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+              </div>
+              <div class="d-flex justify-content-around mb-2">
+                <button class="btn btn-outline-primary w-40"><img
+                    src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="20">
+                  Facebook</button>
+                <button class="btn btn-outline-danger w-40"><img
+                    src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" width="20">
+                  Google</button>
+                <button class="btn btn-outline-info w-40"><img
+                    src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft" width="20">
+                  Microsoft</button>
+              </div>
+              <div id="createAccountErrorMessage"></div>
+            </form>
+            <div class="text-center">Already have an account?
+              <a href="#" id="switchToSignIn">Sign In</a>
+            </div>
+            <p class="small text-center">By creating new account you agree to our <a href="#">Terms of Service</a> and <a
+              href="#">Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Sign-Out Panel -->
+      <div id="signoutPanel" class="signout-panel" style="display: none;">
+        <span class="close-btn" id="closeSignOutPanel">&times;</span>
+        <div class="login">
+          <h2>User Details</h2>
+          <div class="user-details">
+              <p id="userDetailsName"></p>
+              <p id="userDetailsEmail"></p>
+              <p id="userDetailsPhone"></p>
+          </div>
+          <button id="signOutButton">Sign Out</button>
+        </div>
+      </div>
+  </nav>
+  
+  <header>
+    <div class="header-1">
+        <h1 id="top">AGRAWAL</h1>
+        <h1 id="top1">RESTAURANT</h1>
+    </header>
+    <section id="about" class="about-section py-5">
+        <div class="container text-center text-dark fw-bold">
+            <h2>Welcome to Agrawal Restaurant!</h2>
+            <p class="lead">Every meal is an experience.</p>
+        </div>
+    </section>
+  <!-- About us -->
+<!-- About Us Section -->
+<div class="about-us py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczMwUrbHvntZbcwIDGMFrullfjNftD8qveS8DsnO-TGJwELUglSeLnGKTGgqPWuQlt9etQ8tRxl48ncGBv5ccpyIcWTdmezyy11SW6jC5rKxqYjHExL20tTa2XAaIfc5pti0O3TV3uWga9AP5TyhunS_Ow=w661-h377-s-no-gm?authuser=0" class="img-fluid" alt="About us">
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <p>Welcome to Agarwal Restaurant, where we serve authentic flavors crafted with passion. Our chefs use only the freshest ingredients to bring you a delightful dining experience.</p>
+        <a href="#" class="btn btn-warning mt-3">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h3>Why Choose Us?</h3>
+      </div>
+    </div>
+    <div class="row mt-4 text-center">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <img src="https://png.pngtree.com/png-vector/20220706/ourmid/pngtree-peruvian-food-illustration-indian-native-illustration-vector-png-image_32474430.png" width="200px" alt="Authentic Flavors" class="service-img img-fluid">
+        <h5>Authentic Flavors</h5>
+        <p>Fresh ingredients and age-old recipes for meals that remind you of home.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <img src="/assets/photos/a3.png" width="200px" alt="Variety of Cuisines" class="service-img img-fluid">
+        <h5>Variety of Cuisines</h5>
+        <p>From vegetarian to non-vegetarian specialties, we offer diverse options.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <img src="/assets/photos/sky.gif" width="200px" alt="Fast Delivery" class="service-img img-fluid">
+        <h5>Fast Delivery</h5>
+        <p>Hot meals delivered fast to your doorstep.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <img src="/assets/photos/a1.svg" width="200px" alt="Hygiene First" class="service-img img-fluid">
+        <h5>Hygiene First</h5>
+        <p>We follow strict hygiene standards to ensure your safety.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision Section -->
+<section class="vision-section py-5">
+  <div class="container text-center">
+    <h3>Our Vision</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-5 col-sm-12">
+        <img class="img-fluid mb-4" src="assets/photos/vission.png" alt="Vision Image">
+      </div>
+      <div class="col-md-5 col-sm-12">
+        <img class="img-fluid" src="https://ouch-cdn2.icons8.com/ZDS69MGczdR7yVMqtKcUTTz9AMrP107lHcIUkxoiA-g/rs:fit:368:393/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNjM1/LzA1NTZmOGRjLTBl/ODMtNDIyMy1iYzg4/LTgxZGFlNjNlNDli/Zi5wbmc.png" alt="Vision Icon">
+      </div>
+    </div>
+    <p class="pt-5">To bring people together through food and create an unforgettable dining experience that keeps you coming back for more.</p>
+  </div>
+</section>
+
+<!-- Chef Section -->
+<section class="chef-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center mb-4">
+        <h3>Meet Our Head Chef</h3>
+        <img src="assets/photos/chef.PNG" alt="Chef" class="img-fluid rounded-circle mb-3">
+        <h5>Chef Rahul Agrawal</h5>
+        <p>Chef Rahul brings a blend of traditional recipes with modern culinary techniques, ensuring each dish is a masterpiece.</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <h3>Meet Our Head Chef</h3>
+        <img src="assets/photos/chef2.png" alt="Chef" class="img-fluid rounded-circle mb-3">
+        <h5>Chef Rahul Agrawal</h5>
+        <p>Chef Rahul's passion for food is what makes Agrawal Restaurant a unique dining destination.</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <h3>Meet Our Head Chef</h3>
+        <img src="assets/photos/chef1.png" alt="Chef" class="img-fluid rounded-circle mb-3">
+        <h5>Chef Rahul Agrawal</h5>
+        <p>Chef Rahul ensures each dish is prepared with the utmost care and attention to detail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Customer Comments Section -->
+<section class="comments-section py-5">
+  <div class="container text-center">
+    <h3>What Our Customers Say</h3>
+    <div class="row mt-4">
+      <div class="col-md-4 col-sm-12 mb-4">
+        <blockquote class="blockquote">
+          <img src="/assets/photos/g10.jpg" alt="Customer Image" class="rounded-circle mb-2" width="100" height="100">
+          <p>"The food was amazing! The flavors were authentic."</p>
+          <footer class="blockquote-footer">Ravi Mehta</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-4">
+        <blockquote class="blockquote">
+          <img src="assets/photos/c2.png" alt="Customer Image" class="rounded-circle mb-2" width="180" height="100">
+          <p>"Best restaurant experience I've had in years. Highly recommended!"</p>
+          <footer class="blockquote-footer">Pooja Sharma</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4 col-sm-12 mb-4">
+        <blockquote class="blockquote">
+          <img src="/assets/photos/c3.png" alt="Customer Image" class="rounded-circle mb-2" width="100" height="100">
+          <p>"Quick delivery, great food, and an amazing atmosphere."</p>
+          <footer class="blockquote-footer">Amit Patel</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Post Your Comment Section -->
+<section class="comments-section py-5" id="comments">
+  <div class="container text-center">
+    <h3>Post Your Comment</h3>
+    <form id="commentForm" class="mt-4">
+      <div class="mb-3">
+        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="comment" rows="3" placeholder="Your Comment" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="postedComments" class="mt-5"></div>
+  </div>
+</section>
+
+<!-- Join Us Section -->
+<section class="join-us-section py-5 bg-light">
+  <div class="container text-center">
+    <h4>Join Us on This Journey!</h4>
+    <p>Explore our menu and place your order today.</p>
+  </div>
+</section>
+
+<!-- Location Section -->
+<section id="location" class="location-section py-5 bg-light">
+  <div class="container text-center">
+    <h3>Our Location</h3>
+    <p>We are located at 123, Food Street, Jaipur, Rajasthan.</p>
+    <button id="verifyLocationBtn" class="btn btn-primary mb-3">Verify Your Location</button>
+    <div id="verificationStatus" class="mt-3"></div>
+    <div id="map" class="map-responsive">
+      <iframe src="https://maps.google.com/maps?q=123%20Food%20Street,%20Jaipur,%20Rajasthan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+ 
+
+ <!-- Footer -->
+  
+ <footer class="footer mt-5">
+    <div
+      class="container-fluid d-flex flex-wrap justify-content-center p-5 bg-light text-black border border-2 border-black">
+      <div class="footer-section col-md-4 p-5">
+        <h3>Opening Hours</h3>
+          <li><strong>Monday - Friday</strong><span>08.00 am - 10.00 pm</span></li>
+          <li><strong>Saturday</strong><span>08.00 am - 12.00 pm</span></li>
+          <li><strong>Sunday</strong><span>08.00 am - 12.00 pm</span></li>
+      </div>
+      <div class="footer-section col-md-4 p-5">
+        <h3>Contact Us</h3>
+        <address>
+          <b>Hanish Singhal</b> <br>
+          A-133, AGRAWAL RESTAURANT, Skit Collage Gate No. 1, Radhika Bakers,<br>
+          Jaipur, Rajasthan - 302017
+          <p><i class="fa fa-phone" alt="phone"></i><strong> +91-7878-030-802</strong></p>
+          <p><i class="fa fa-phone"></i><strong> +91-7073-731-764</strong></p>
+        </address>
+      </div>
+      <div class="footer-section col-md-4 p-5">
+        <h3>Newsletter</h3>
+        <p>You can trust us. We only send promo offers, not a single spam.</p>
+        <form id="newsletter-form">
+          <input type="email" id="email2" placeholder="Your Email address" required>
+          <button type="submit">➔</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&#169;Copyright 2024 All rights reserved | This website is managed by <a href="#" target="_blank"
+          style="color: red;">❤️Agrawal Restaurant</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/hanish.singhal.77"><i class="fa fa-facebook" alt="Facebook"></i></a>
+        <a href="https://x.com/Hanish7878"><i class="fa fa-twitter" alt="Twitter"></i></a>
+        <a href="https://www.instagram.com/infinite_hanish/"><i class="fa fa-instagram" alt="Dribbble"></i></a>
+        <a href="#"><i class="fa fa-behance" alt="Behance"></i></a>
+      </div>
+    </div>
+  </footer>
+<script src="assets/js/js.js"></script>
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/footer.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Post Comment Form Submission
+const commentForm = document.getElementById('commentForm');
+const postedComments = document.getElementById('postedComments');
+
+commentForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Get form data
+  const name = document.getElementById('name').value;
+  const comment = document.getElementById('comment').value;
+
+  // Create a new comment element
+  const newComment = document.createElement('div');
+  newComment.classList.add('card', 'mt-3');
+  newComment.innerHTML = `
+    <div class="card-body">
+      <h5 class="card-title">${name}</h5>
+      <p class="card-text">${comment}</p>
+    </div>
+  `;
+
+  // Append the new comment to the comments section
+  postedComments.appendChild(newComment);
+
+  // Clear form
+  commentForm.reset();
+});
+
+document.getElementById('verifyLocationBtn').addEventListener('click', function() {
+    // Get the user's current location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        document.getElementById('verificationStatus').innerHTML = "Geolocation is not supported by this browser.";
+    }
+});
+
+// Restaurant location (SKIT College, Jaipur) - Latitude and Longitude
+const restaurantLat = 26.8245;
+const restaurantLng = 75.8228;
+
+function showPosition(position) {
+    const userLat = position.coords.latitude;
+    const userLng = position.coords.longitude;
+
+    // Calculate distance between user location and restaurant location
+    const distance = calculateDistance(userLat, userLng, restaurantLat, restaurantLng);
+
+    // Define a threshold for "nearby" (in kilometers)
+    const threshold = 50; // e.g., 2 km
+
+    if (distance <= threshold) {
+        document.getElementById('verificationStatus').innerHTML = "You are near the restaurant!";
+    } else {
+        document.getElementById('verificationStatus').innerHTML = "You are not near the restaurant.";
+    }
+
+    // Update Google Maps iframe to show user's location automatically
+    const userLocationMap = `https://maps.google.com/maps?q=${userLat},${userLng}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
+    document.getElementById('map').innerHTML = `<iframe src="${userLocationMap}" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>`;
+}
+
+function showError(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            document.getElementById('verificationStatus').innerHTML = "User denied the request for Geolocation.";
+            break;
+        case error.POSITION_UNAVAILABLE:
+            document.getElementById('verificationStatus').innerHTML = "Location information is unavailable.";
+            break;
+        case error.TIMEOUT:
+            document.getElementById('verificationStatus').innerHTML = "The request to get user location timed out.";
+            break;
+        case error.UNKNOWN_ERROR:
+            document.getElementById('verificationStatus').innerHTML = "An unknown error occurred.";
+            break;
+    }
+}
+
+// Function to calculate the distance between two coordinates using the Haversine formula
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Radius of the Earth in km
+    const dLat = deg2rad(lat2 - lat1);
+    const dLon = deg2rad(lon2 - lon1);
+    const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const distance = R * c; // Distance in km
+    return distance;
+}
+
+function deg2rad(deg) {
+    return deg * (Math.PI / 180);
+}
+
+  </script>
+</body>
+
+</html>

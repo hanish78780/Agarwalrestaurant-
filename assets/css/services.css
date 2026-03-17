@@ -1,0 +1,100 @@
+body {
+    background-color: #faf4e5;
+}
+.header {
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczOvRdp5U7sAU03_k2K9MpIxexiisFTKVrhxSfisPmzcQRPdAiQ05-Gv5EG0Fzqc7KINtPpr9oIbxVM-sw2BgSAeK36DTE75cS_mHYefsj6Hv4xVpvu8AxGqMlaVmNFLE-AQbNdrWh7OajWzKOyxBw5ZCw=w1000-h375-s-no-gm?authuser=0');
+    background-size: cover;
+    background-position:center;
+    height: 80vh;
+    color: white;
+}
+.header h1 {
+   padding-top: 230px;
+    padding-left: 30px;
+    font-size: 48px;
+    text-align: left;
+    color: darkorange;
+    text-shadow: 0 10px 20px rgb(10, 10, 10);
+}
+.discount{
+    border: 5px solid red;
+}
+.discount-offers img, .best-selling-dishes img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.discount-offers img:hover,.best-selling-dishes img:hover{
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+}
+.discount-offers .offer, .best-selling-dishes .dish {
+    margin-bottom: 20px;
+}
+.customer-comments {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+}
+
+.customer-comments img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+}
+.where-we-deliver {
+    text-align: center;
+    padding: 30px;
+}
+#message {
+    margin-top: 20px;
+}
+#map {
+    height: 500px;
+    width: 100%;
+}
+.how-it-works img {
+    width: 200px;
+    height: 200px;
+}
+.how-it-works h5 {
+    margin-top: 10px;
+}
+
+/* Media Queries */
+
+/* Large screens (desktops) */
+@media only screen and (min-width: 1200px) {
+    .header {
+        height: 100vh;
+    }
+    .header h1 {
+        font-size: 60px;
+    }
+}
+
+/* Medium screens (laptops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .header {
+        height: 90vh;
+    }
+    .header h1 {
+        font-size: 48px;
+    }
+}
+
+/* Small screens (tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header {
+        height: 80vh;
+    }
+    .header h1 {
+        font-size: 36px;
+    }
+    .discount-offers img, .best-selling-dishes img {
+        width: 100%;
+        height: auto;
+    }
+}

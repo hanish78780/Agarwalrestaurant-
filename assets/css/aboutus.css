@@ -1,0 +1,162 @@
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+  margin: 0;
+  padding: 0;
+}
+
+.about-section {
+  background: #f5fefd;
+  color: white;
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.why-choose-us {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.why-choose-us h3 {
+  font-size: 36px;
+  color: #343a40;
+  margin-bottom: 30px;
+}
+
+.why-choose-us h5 {
+  font-size: 22px;
+  color: #ff6f61;
+}
+
+.why-choose-us p {
+  color: #6c757d;
+}
+
+.vision-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.vision-section h3 {
+  font-size: 36px;
+  color: #343a40;
+}
+
+.vision-section p {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.join-us-section {
+  background: linear-gradient(135deg, #ff6f61, #ff914d);
+  color: white;
+}
+
+.join-us-section h4 {
+  font-size: 28px;
+}
+
+.join-us-section p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.join-us-section p a:hover {
+  color: #ffd700;
+}
+.chef-section{
+    background-color: #fff;
+}
+.chef-section img {
+    max-width: 200px;
+    border: 5px solid #ff6f61;
+}
+
+.comments-section blockquote {
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 5px solid #ff6f61;
+    font-style: italic;
+}
+
+#location {
+    height: 100%;
+}
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+.map-responsive iframe {
+    left: 0%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+.about-us .row, .why-choose-us .row, .vision-section .col, .chef-section .row, .comments-section .row, .join-us-section .container, .location-section .container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-us img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.why-choose-us h3 {
+  font-size: 28px;
+}
+
+.why-choose-us h5 {
+  font-size: 20px;
+}
+
+.why-choose-us p {
+  font-size: 14px;
+}
+
+.service-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.vision-section img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.vision-section p {
+  font-size: 16px;
+}
+
+.chef-section img {
+  max-width: 150px;
+}
+
+.chef-section p {
+  font-size: 14px;
+}
+
+.comments-section blockquote {
+  font-size: 14px;
+}
+
+.comments-section img {
+  width: 80px;
+  height: 80px;
+}
+
+.join-us-section h4 {
+  font-size: 24px;
+}
+
+.join-us-section p {
+  font-size: 14px;
+}
+} 

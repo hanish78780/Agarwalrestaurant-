@@ -1,0 +1,250 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron {
+  background-image: url('https://lh3.googleusercontent.com/pw/AP1GczMQK_mngX7zKm-n5R-mxsB7yxqrX4_9LXIljZoICc6s0Tx6L3eQD_VcyhKixizLAokoew9PFwaur_VvplMUPKFb5x6B_YO7hvS0GWJfAoG0bbekbpzS53wbUzLRHNR6gNjJ6ke5i3U_zaPBgDbxB6vmow=w1000-h667-s-no-gm?authuser=0');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* color: #f50b0b; */
+}
+
+.jumbotron h1 {
+  width: 50%;
+  font-size: 48px;
+  /* margin-bottom: 20px; */
+}
+
+.jumbotron h3 {
+  width: 50%;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+#restaurant-image {
+  margin-top: 40px;
+}
+
+#restaurant-image img {
+  width: 100%;
+  height: 500px;
+  /* object-fit: cover; */
+  border-radius: 10px;
+}
+
+#about, #interior, #hall, #reviews {
+  padding: 40px;
+}
+
+#about, #hall {
+  background-color: #f7f7f7;
+}
+
+#interior, #reviews {
+  background-color: #fff;
+}
+
+#about h2, #interior h2, #hall h2, #reviews h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#about p, #reviews .review p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+#interior img, #hall img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#interior img {
+  height: 00px;
+  object-fit: cover;
+}
+
+#hall img {
+  height: px;
+  object-fit: cover;
+}
+
+#reviews .review {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+#reviews .review span {
+  font-size: 16px;
+  color: #666;
+}
+
+#booking {
+  background: linear-gradient(90deg, hsla(234, 80%, 88%, 1) 0%, hsla(340, 68%, 88%, 1) 50%, hsla(342, 72%, 85%, 1) 100%);
+  padding: 60px 20px;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#table-booking {
+  max-width: 500px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.21);
+  padding: 20px;
+}
+
+#booking h2 {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+#booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#booking-form .form-control {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 30px;
+  color: #333;
+  font-size: 16px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#booking-form .form-control:focus {
+  outline: none;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+#booking-form .form-control::placeholder {
+  color: #666;
+}
+
+.booking-btn {
+  background-color: #ff5e62;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-btn:hover {
+  background-color: #ff8a71;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .jumbotron h1, .jumbotron h3 {
+    width: 80%;
+    font-size: 36px;
+  }
+
+  #restaurant-image img {
+    height: 300px;
+  }
+
+  #about h2, #interior h2, #hall h2, #reviews h2 {
+    font-size: 30px;
+  }
+
+  #about p, #reviews .review p {
+    font-size: 16px;
+  }
+
+  #interior img, #hall img {
+    height: 180px;
+  }
+
+  #table-booking {
+    max-width: 90%;
+  }
+
+  #booking-form .form-control {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Phones */
+@media (min-width: 480px) {
+  .jumbotron h1, .jumbotron h3 {
+    width: 90%;
+    font-size: 28px;
+  }
+
+  #restaurant-image img {
+    height: 250px;
+  }
+
+  #about h2, #interior h2, #hall h2, #reviews h2 {
+    font-size: 24px;
+  }
+
+  #about p, #reviews .review p {
+    font-size: 14px;
+  }
+
+  #interior img, #hall img {
+    height: 150px;
+  }
+
+  #table-booking {
+    padding: 15px;
+  }
+
+  #booking-form .form-control {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+.marquee-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .marquee-desktop {
+    display: none;
+  }
+  .marquee-mobile {
+    display: block;
+  }
+}

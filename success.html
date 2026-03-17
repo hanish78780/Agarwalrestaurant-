@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/photos/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/photos/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/photos/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Payment Successful</title>
+    <style>
+        body {
+            background-color: #f5fefd;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.407);
+            text-align: center;
+        }
+
+        header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #28a745;
+            /* Success green color */
+        }
+
+        .success-message {
+            margin-bottom: 20px;
+        }
+
+        .success-message img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .success-message h2 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .order-summary {
+            margin-top: 20px;
+        }
+
+        .order-summary h3 {
+            font-size: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .order-summary ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .order-summary li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .total-amount {
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-primary {
+            background-color: #f0a500;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+    </style> <!-- Link to CSS -->
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Payment Successful!</h1>
+        </header>
+
+        <!-- Success Message -->
+        <section class="success-message">
+            <img src="https://img.icons8.com/color/96/ok--v1.png" alt="Success Icon" />
+            <h2>Thank you for your order!</h2>
+            <p>Your payment has been successfully processed.</p>
+            <p>Order Number: <strong id="order-number"></strong></p>
+        </section>
+
+        <!-- Order Summary -->
+        <section class="order-summary">
+            <h3>Order Summary</h3>
+            <ul id="order-items">
+                <!-- Order items will be injected here -->
+            </ul>
+            <div class="total-amount">
+                <span>Total Paid: </span>
+                <span id="total-paid">Rs. 0.00</span>
+            </div>
+        </section>
+
+        <!-- Continue Shopping Button -->
+        <footer>
+            <a href="menu.html" class="btn btn-primary">Continue Shopping</a>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function () {
+            // Retrieve order details from localStorage (if available)
+            const orderItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalPaid = JSON.parse(localStorage.getItem('cartTotal')) || 0;
+            const orderNumber = Math.floor(Math.random() * 1000000) + 1;  // Generate a random order number
+
+            // Populate order number
+            document.getElementById('order-number').innerText = orderNumber;
+
+            // Populate total paid amount
+            document.getElementById('total-paid').innerText = `Rs. ${totalPaid.toFixed(2)}`;
+
+            // Populate order items
+            const orderItemsContainer = document.getElementById('order-items');
+            orderItems.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${item.title}</span><span>Rs. ${item.price.toFixed(2)}</span>`;
+                orderItemsContainer.appendChild(li);
+            });
+
+            // Clear cart after order confirmation
+            localStorage.removeItem('cart');
+            localStorage.removeItem('cartTotal');
+        };
+
+    </script> <!-- Link to JavaScript -->
+</body>
+
+</html>

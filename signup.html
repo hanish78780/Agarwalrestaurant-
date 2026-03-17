@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+     <!-- Sign-In/Sign-Up Modal -->
+     <div id="login">
+        <div id="signinPanel" class="signin-panel" style="display: none;">
+          <span class="close-btn" id="closePanel">&times;</span>
+          <div id="signinForm" class="login">
+            <h2 class="mb-3 text-info text-center" style="border-bottom: 2px solid skyblue;">SIGN IN</h2>
+
+            <form id="signIn">
+              <div class="mb-2">
+                <label for="name" class="form-label">Full Name:-</label>
+                <input type="text" class="form-control" id="createAccountName" placeholder="Full Name" required>
+              </div>
+              <div class="mb-2">
+                <label for="signInPhone" class="form-label">Phone Number:-</label>
+                <input type="tel" class="form-control" id="signInPhone" name="Phone" pattern="[0-9]{10}"
+                  placeholder="Enter 10-digit phone number" maxlength="10" required>
+              </div>
+              <div class="mb-2">
+                <label for="email" class="form-label">Email Address:-</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Password:-</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:10px"> Remember me
+              </label>
+
+              <button type="submit" class="btn btn-primary w-100 mb-2 text-center">Sign In</button>
+              <div class="d-flex justify-content-center align-items-center ">
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+                <span class="text-black mt-2 mb-2">OR CONTINUE WITH</span>
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+              </div>
+              <div class="d-flex justify-content-around mb-2">
+                <button class="btn btn-outline-primary w-40"><img
+                    src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="20">
+                  Facebook</button>
+                <button class="btn btn-outline-danger w-40"><img
+                    src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" width="20">
+                  Google</button>
+                <button class="btn btn-outline-info w-40"><img
+                    src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft" width="20">
+                  Microsoft</button>
+              </div>
+              <div id="errorMessage"></div>
+            </form>
+            <div class="text-center">New user?
+              <a href="#" id="switchToCreateAccount">Create an Account</a>
+            </div>
+            <p class="small text-center">By signing up you agree to our <a href="#">Terms of Service</a> and <a
+                href="#">Privacy Policy</a>.</p>
+
+          </div>
+
+          <div class="login" id="createAccountForm" style="display: none;">
+            <h2 class="mb-3 text-info text-center" style="border-bottom: 2px solid skyblue;">Create Account</h2>
+            <form id="createAccount">
+              <div class="mb-2">
+                <label for="name" class="form-label">Full Name:-</label>
+                <input type="text" class="form-control" id="createAccountName" placeholder="Full Name" required>
+              </div>
+              <div class="mb-2">
+                <label for="createPhoneNumber" class="form-label">Phone Number:</label>
+                <input type="tel" class="form-control" id="createPhoneNumber" name="Phone" pattern="[0-9]{10}"
+                  placeholder="Enter 10-digit phone number" maxlength="10" required>
+              </div>
+              <div class="mb-2">
+                <label for="email" class="form-label">Email Address:-</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Password:-</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:10px"> Remember me
+              </label>
+              <button type="submit" class="btn btn-primary w-100  mb-2 text-center">Create Account</button>
+              <div class="d-flex justify-content-center align-items-center ">
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+                <span class="text-black mt-2 mb-2">OR CONTINUE WITH</span>
+                <hr style="flex-grow: 1; border: none; border-top: 1px solid #000; margin: 0 10px;">
+              </div>
+              <div class="d-flex justify-content-around mb-2">
+                <button class="btn btn-outline-primary w-40"><img
+                    src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="20">
+                  Facebook</button>
+                <button class="btn btn-outline-danger w-40"><img
+                    src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" width="20">
+                  Google</button>
+                <button class="btn btn-outline-info w-40"><img
+                    src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft" width="20">
+                  Microsoft</button>
+              </div>
+              <div id="createAccountErrorMessage"></div>
+            </form>
+            <div class="text-center">Already have an account?
+              <a href="#" id="switchToSignIn">Sign In</a>
+            </div>
+            <p class="small text-center">By creating new account you agree to our <a href="#">Terms of Service</a> and
+              <a href="#">Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Sign-Out Panel -->
+      <div id="signoutPanel" class="signout-panel" style="display: none;">
+        <span class="close-btn" id="closeSignOutPanel">&times;</span>
+        <div class="login">
+          <h2>User Details</h2>
+          <div class="user-details">
+            <p id="userDetailsName"></p>
+            <p id="userDetailsEmail"></p>
+            <p id="userDetailsPhone"></p>
+          </div>
+          <button id="signOutButton">Sign Out</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/js.js"></script>
+</body>
+</html>

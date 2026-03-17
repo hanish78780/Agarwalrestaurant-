@@ -1,0 +1,99 @@
+body {
+  background: url("https://lh3.googleusercontent.com/pw/AP1GczP0b7iY_UUJ2Waj00LCtWEZ7Rg46KMdhl4WuVuJsRfHUO9r8knjsry2WC-mBva7TENfZ3nrY2xTozYRrEtDLgOK86x0SlVKPM3KEvFJN9Z1sc5FByNbX6grG9QITQ7zLqKQ6ZuYve4plHw8hokI_ejVQA=w1006-h928-s-no-gm?authuser=0") no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(3px); /* Slight blur for a subtle effect */
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-box {
+  border: 2px dashed #28a745;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(245, 245, 220, 0.9); /* Slight transparency for a softer look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More subtle shadow */
+  animation: slideIn 1.5s ease-out;
+}
+
+.order-image {
+  width: 100%;
+  max-width: 500px;
+  max-height: 300px;
+  margin: 0 auto;
+  object-fit: cover;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.tick {
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  border-radius: 50%; /* Ensures a perfect circle */
+  animation: hover-effect 3s infinite;
+}
+
+.tick:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+  background-color: #218838; /* Slightly darker green on hover */
+}
+
+@keyframes hover-effect {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h1, h3, .tick {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  h1, h3 {
+    font-size: 1.5rem;
+  }
+  .order-box {
+    padding: 1rem;
+  }
+  .tick, .order-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}
