@@ -2,6 +2,9 @@
 
 Welcome to the **Agrawal Restaurant** web application repository! This is a fully functional, responsive, and dynamic restaurant website designed to offer a seamless food ordering and table booking experience for customers.
 
+🌐 **Live Demo:** [agrawalrestaurant.netlify.app](https://agrawalrestaurant.netlify.app/)
+
+
 ## 🚀 Features
 
 - **🍔 Dynamic Menu System:** Browse over 50+ delicious items divided into categories (Breakfast, Dinner, Desserts, Beverages, Combos).
